@@ -1,0 +1,142 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Work Plan",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-WP-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "work_request",
+  "division",
+  "project_profile",
+  "customer",
+  "assignments_section",
+  "assignments",
+  "after_assignments",
+  "released_by",
+  "released_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "work_request",
+   "label": "Work Request",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Work Request"
+  },
+  {
+   "fieldname": "division",
+   "label": "Division",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Division"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Customer"
+  },
+  {
+   "fieldname": "assignments_section",
+   "label": "Assignments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assignments",
+   "label": "Assignments",
+   "fieldtype": "Table",
+   "options": "Lab Plan Item"
+  },
+  {
+   "fieldname": "after_assignments",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "released_by",
+   "label": "Released By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "released_on",
+   "label": "Released On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

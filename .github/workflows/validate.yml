@@ -1,0 +1,77 @@
+name: Validate AV LIMS
+on:
+  push:
+    branches: [version-16-hotfix]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: pip install ruff build flit_core
+      - run: ruff check .
+      - run: python -m compileall -q av_lims tools
+      - run: python -m unittest discover -s tests -v
+      - run: find av_lims -name '*.js' -exec node --check {} \;
+      - run: python -m build
+  frappe-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    services:
+      mariadb:
+        image: mariadb:11.8
+        env:
+          MARIADB_ROOT_PASSWORD: root
+          MARIADB_ROOT_HOST: '%'
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+      redis:
+        image: redis:7-alpine
+        ports: ['6379:6379']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: System dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libmariadb-dev pkg-config libcups2-dev libffi-dev libssl-dev redis-tools
+          pip install frappe-bench
+          npm install -g yarn
+      - name: Create bench and install apps
+        run: |
+          bench init --skip-assets --frappe-branch version-16 --python "$(command -v python)" /tmp/lims-bench
+          cd /tmp/lims-bench
+          bench set-config -g redis_cache redis://127.0.0.1:6379/0
+          bench set-config -g redis_queue redis://127.0.0.1:6379/1
+          bench set-config -g redis_socketio redis://127.0.0.1:6379/2
+          bench get-app --branch version-16 --skip-assets erpnext https://github.com/frappe/erpnext
+          bench get-app --skip-assets av_lims "$GITHUB_WORKSPACE"
+          bench new-site lims.test --db-host 127.0.0.1 --db-port 3306 --db-root-password root --admin-password admin --mariadb-user-host-login-scope '%'
+          bench --site lims.test install-app erpnext
+          bench --site lims.test install-app av_lims
+          bench --site lims.test set-config allow_tests true
+          bench --site lims.test migrate
+      - name: Run site tests
+        working-directory: /tmp/lims-bench
+        run: bench --site lims.test run-tests --module av_lims.tests.test_site --skip-before-tests
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: frappe-integration-logs
+          path: /tmp/lims-bench/logs

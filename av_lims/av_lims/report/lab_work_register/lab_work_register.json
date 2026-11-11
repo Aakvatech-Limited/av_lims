@@ -1,0 +1,25 @@
+{
+ "doctype": "Report",
+ "name": "Lab Work Register",
+ "report_name": "Lab Work Register",
+ "ref_doctype": "Lab Work Request",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "module": "AV LIMS",
+ "add_total_row": 0,
+ "disabled": 0,
+ "roles": [
+  {
+   "role": "LIMS Technician"
+  },
+  {
+   "role": "LIMS Lead"
+  },
+  {
+   "role": "LIMS Manager"
+  },
+  {
+   "role": "LIMS Approver"
+  }
+ ]
+}

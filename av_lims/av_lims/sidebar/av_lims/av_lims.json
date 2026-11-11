@@ -1,0 +1,327 @@
+{
+ "doctype": "Sidebar",
+ "name": "AV LIMS",
+ "title": "AV LIMS",
+ "module": "AV LIMS",
+ "app": "av_lims",
+ "standard": 1,
+ "header_icon": "\ud83e\uddea",
+ "items": [
+  {
+   "type": "Link",
+   "label": "Home",
+   "link_type": "Workspace",
+   "link_to": "AV LIMS"
+  },
+  {
+   "type": "Section Break",
+   "label": "Intake and Planning",
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Inspection Test Plan",
+   "link_type": "DocType",
+   "link_to": "Lab Inspection Test Plan",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Hold Point Release",
+   "link_type": "DocType",
+   "link_to": "Lab Hold Point Release",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Work Request",
+   "link_type": "DocType",
+   "link_to": "Lab Work Request",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Work Authorization",
+   "link_type": "DocType",
+   "link_to": "Lab Work Authorization",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Sample Receipt",
+   "link_type": "DocType",
+   "link_to": "Lab Sample Receipt",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Sample",
+   "link_type": "DocType",
+   "link_to": "Lab Sample",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Work Plan",
+   "link_type": "DocType",
+   "link_to": "Lab Work Plan",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Testing",
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Chain of Custody",
+   "link_type": "DocType",
+   "link_to": "Lab Chain of Custody",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Specimen",
+   "link_type": "DocType",
+   "link_to": "Lab Specimen",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Conditioning Record",
+   "link_type": "DocType",
+   "link_to": "Lab Conditioning Record",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Test Schedule",
+   "link_type": "DocType",
+   "link_to": "Lab Test Schedule",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Test Execution",
+   "link_type": "DocType",
+   "link_to": "Lab Test Execution",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Review and Release",
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "QA Review",
+   "link_type": "DocType",
+   "link_to": "Lab QA Review",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Nonconformance",
+   "link_type": "DocType",
+   "link_to": "Lab Nonconformance",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Corrective Action",
+   "link_type": "DocType",
+   "link_to": "Lab Corrective Action",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Conformity Evaluation",
+   "link_type": "DocType",
+   "link_to": "Lab Conformity Evaluation",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Result Report",
+   "link_type": "DocType",
+   "link_to": "Lab Result Report",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Result Dispatch",
+   "link_type": "DocType",
+   "link_to": "Lab Result Dispatch",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Project Masters",
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Project Profile",
+   "link_type": "DocType",
+   "link_to": "Lab Project Profile",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Sampling Location",
+   "link_type": "DocType",
+   "link_to": "Lab Sampling Location",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Material Lot",
+   "link_type": "DocType",
+   "link_to": "Lab Material Lot",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Specification Version",
+   "link_type": "DocType",
+   "link_to": "Lab Specification Version",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Laboratory Setup",
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Division",
+   "link_type": "DocType",
+   "link_to": "Lab Division",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Sample Type",
+   "link_type": "DocType",
+   "link_to": "Lab Sample Type",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Test Definition",
+   "link_type": "DocType",
+   "link_to": "Lab Test Definition",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Test Method Version",
+   "link_type": "DocType",
+   "link_to": "Lab Test Method Version",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "QA Checklist Version",
+   "link_type": "DocType",
+   "link_to": "Lab QA Checklist Version",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Equipment",
+   "link_type": "DocType",
+   "link_to": "Lab Equipment",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Equipment Check",
+   "link_type": "DocType",
+   "link_to": "Lab Equipment Check",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Competency",
+   "link_type": "DocType",
+   "link_to": "Lab Competency",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Settings",
+   "link_type": "DocType",
+   "link_to": "Lab Settings",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Reports",
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Work Register",
+   "link_type": "Report",
+   "link_to": "Lab Work Register",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Test Due Register",
+   "link_type": "Report",
+   "link_to": "Lab Test Due Register",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "Nonconformance Register",
+   "link_type": "Report",
+   "link_to": "Lab Nonconformance Register",
+   "child": 1,
+   "is_default_module": 1
+  },
+  {
+   "type": "Link",
+   "label": "ITP Coverage",
+   "link_type": "Report",
+   "link_to": "Lab ITP Coverage",
+   "child": 1,
+   "is_default_module": 1
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Custody Event",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "event_time",
+  "from_user",
+  "to_user",
+  "location",
+  "acknowledged_by",
+  "acknowledged_on",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_time",
+   "label": "Event Time",
+   "fieldtype": "Datetime",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "from_user",
+   "label": "From User",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "fieldname": "to_user",
+   "label": "To User",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "User"
+  },
+  {
+   "fieldname": "location",
+   "label": "Location",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "acknowledged_by",
+   "label": "Acknowledged By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "acknowledged_on",
+   "label": "Acknowledged On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

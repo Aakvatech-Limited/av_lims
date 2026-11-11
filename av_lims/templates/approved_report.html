@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+body { font-family: sans-serif; font-size: 10pt; color: #172635; }
+h1 { font-size: 20pt; color: #243b5a; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+th, td { text-align: left; padding: 7px; border: 1px solid #d9dfe7; }
+th { background: #eef2f7; } .small { font-size: 8pt; }
+</style></head><body>
+<h1>{{ report.title | e }}</h1>
+<p><strong>Report</strong> {{ report.report | e }}<br>
+<strong>Work request</strong> {{ report.work_request | e }}<br>
+<strong>Customer</strong> {{ report.customer | e }}<br>
+<strong>Project</strong> {{ report.project_profile | e }}</p>
+{% for item in report.results %}
+<h3>Sample {{ item.sample | e }}{% if item.specimen %} / Specimen {{ item.specimen | e }}{% endif %}</h3>
+<p>Method {{ item.method | e }} / Execution {{ item.execution | e }}</p>
+<table><thead><tr><th>Parameter</th><th>Result</th><th>Unit</th></tr></thead><tbody>
+{% for value in item.results %}<tr><td>{{ value.code | e }}</td><td>{{ value.value | e }}</td><td>{{ value.uom | e }}</td></tr>{% endfor %}
+</tbody></table>
+{% endfor %}
+{% if report.conformity %}
+<h2>Material conformity</h2>
+<p>Specification {{ report.conformity.specification | e }} / Version {{ report.conformity.version | e }}<br>
+Decision rule: {{ report.conformity.decision_rule | e }} / Outcome: {{ report.conformity.outcome | e }}</p>
+{% for item in report.conformity.evaluations %}
+<table><thead><tr><th>Execution</th><th>Parameter</th><th>Value</th><th>Lower</th><th>Upper</th><th>Outcome</th></tr></thead>
+<tbody>{% for value in item.results %}<tr><td>{{ item.execution | e }}</td><td>{{ value.code | e }}</td><td>{{ value.value | e }}</td><td>{{ value.lower or '' | e }}</td><td>{{ value.upper or '' | e }}</td><td>{{ value.outcome | e }}</td></tr>{% endfor %}</tbody></table>
+{% endfor %}{% endif %}
+{% if report.remarks %}<p>{{ report.remarks | e }}</p>{% endif %}
+<p>Approved by {{ report.approved_by | e }} on {{ report.approved_on | e }}</p>
+{% if report.supersedes %}<p>This report supersedes {{ report.supersedes | e }}.</p>{% endif %}
+<p class="small">This file preserves the approved revision. Material conformity and laboratory QA are separate decisions.</p>
+</body></html>

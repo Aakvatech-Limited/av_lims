@@ -1,0 +1,126 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Equipment Check",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-EC-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "equipment",
+  "checked_on",
+  "valid_until",
+  "certificate",
+  "column_5",
+  "verified_by",
+  "verified_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "equipment",
+   "label": "Equipment",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Equipment"
+  },
+  {
+   "fieldname": "checked_on",
+   "label": "Checked On",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_until",
+   "label": "Valid Until",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "certificate",
+   "label": "Certificate",
+   "fieldtype": "Attach",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified_by",
+   "label": "Verified By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "verified_on",
+   "label": "Verified On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

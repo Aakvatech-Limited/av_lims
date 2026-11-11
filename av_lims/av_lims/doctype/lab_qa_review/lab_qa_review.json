@@ -1,0 +1,188 @@
+{
+ "doctype": "DocType",
+ "name": "Lab QA Review",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-QR-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "work_request",
+  "division",
+  "project_profile",
+  "customer",
+  "column_5",
+  "checklist_version",
+  "results_section",
+  "results",
+  "responses_section",
+  "responses",
+  "after_responses",
+  "remarks",
+  "corrective_action",
+  "column_10",
+  "reviewed_by",
+  "reviewed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "work_request",
+   "label": "Work Request",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Work Request"
+  },
+  {
+   "fieldname": "division",
+   "label": "Division",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Division"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "checklist_version",
+   "label": "Checklist Version",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab QA Checklist Version"
+  },
+  {
+   "fieldname": "results_section",
+   "label": "Results",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "results",
+   "label": "Results",
+   "fieldtype": "Table",
+   "options": "Lab Review Result"
+  },
+  {
+   "fieldname": "responses_section",
+   "label": "Responses",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "responses",
+   "label": "Responses",
+   "fieldtype": "Table",
+   "options": "Lab Checklist Response"
+  },
+  {
+   "fieldname": "after_responses",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "corrective_action",
+   "label": "Corrective Action",
+   "fieldtype": "Link",
+   "options": "Lab Corrective Action"
+  },
+  {
+   "fieldname": "column_10",
+   "label": "Column 10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "label": "Reviewed By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_on",
+   "label": "Reviewed On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

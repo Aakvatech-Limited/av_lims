@@ -1,0 +1,294 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Test Execution",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-TE-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "work_request",
+  "division",
+  "project_profile",
+  "customer",
+  "column_5",
+  "sample",
+  "specimen",
+  "work_plan",
+  "custody",
+  "method_version",
+  "column_10",
+  "test_schedule",
+  "supersedes",
+  "change_reason",
+  "tested_on",
+  "observations_section",
+  "observations",
+  "equipment_section",
+  "equipment",
+  "after_equipment",
+  "raw_evidence",
+  "results_section",
+  "results",
+  "after_results",
+  "method_snapshot",
+  "result_digest",
+  "column_20",
+  "tested_by",
+  "raw_completed_on",
+  "processed_by",
+  "processed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "work_request",
+   "label": "Work Request",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Work Request"
+  },
+  {
+   "fieldname": "division",
+   "label": "Division",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Division"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sample",
+   "label": "Sample",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Sample"
+  },
+  {
+   "fieldname": "specimen",
+   "label": "Specimen",
+   "fieldtype": "Link",
+   "options": "Lab Specimen"
+  },
+  {
+   "fieldname": "work_plan",
+   "label": "Work Plan",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Work Plan"
+  },
+  {
+   "fieldname": "custody",
+   "label": "Custody",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Chain of Custody"
+  },
+  {
+   "fieldname": "method_version",
+   "label": "Method Version",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Test Method Version"
+  },
+  {
+   "fieldname": "column_10",
+   "label": "Column 10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_schedule",
+   "label": "Test Schedule",
+   "fieldtype": "Link",
+   "options": "Lab Test Schedule"
+  },
+  {
+   "fieldname": "supersedes",
+   "label": "Supersedes",
+   "fieldtype": "Link",
+   "options": "Lab Test Execution"
+  },
+  {
+   "fieldname": "change_reason",
+   "label": "Change Reason",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "tested_on",
+   "label": "Tested On",
+   "fieldtype": "Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observations_section",
+   "label": "Observations",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "observations",
+   "label": "Observations",
+   "fieldtype": "Table",
+   "options": "Lab Observation"
+  },
+  {
+   "fieldname": "equipment_section",
+   "label": "Equipment",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "equipment",
+   "label": "Equipment",
+   "fieldtype": "Table",
+   "options": "Lab Equipment Usage"
+  },
+  {
+   "fieldname": "after_equipment",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "raw_evidence",
+   "label": "Raw Evidence",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "results_section",
+   "label": "Results",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "results",
+   "label": "Results",
+   "fieldtype": "Table",
+   "options": "Lab Result Value"
+  },
+  {
+   "fieldname": "after_results",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "method_snapshot",
+   "label": "Method Snapshot",
+   "fieldtype": "Code",
+   "read_only": 1,
+   "options": "JSON"
+  },
+  {
+   "fieldname": "result_digest",
+   "label": "Result Digest",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_20",
+   "label": "Column 20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tested_by",
+   "label": "Tested By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_completed_on",
+   "label": "Raw Completed On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processed_by",
+   "label": "Processed By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processed_on",
+   "label": "Processed On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

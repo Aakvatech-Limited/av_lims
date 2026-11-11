@@ -1,0 +1,154 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Material Lot",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-ML-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "project_profile",
+  "lot_reference",
+  "supplier",
+  "item",
+  "column_5",
+  "source_location",
+  "delivery_ticket",
+  "pour_reference",
+  "mix_reference",
+  "grade",
+  "column_10",
+  "produced_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "lot_reference",
+   "label": "Lot Reference",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "item",
+   "label": "Item",
+   "fieldtype": "Link",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_location",
+   "label": "Source Location",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "delivery_ticket",
+   "label": "Delivery Ticket",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "pour_reference",
+   "label": "Pour Reference",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "mix_reference",
+   "label": "Mix Reference",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "grade",
+   "label": "Grade",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_10",
+   "label": "Column 10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "produced_on",
+   "label": "Produced On",
+   "fieldtype": "Datetime"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

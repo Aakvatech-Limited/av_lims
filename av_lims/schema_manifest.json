@@ -1,0 +1,232 @@
+{
+ "Lab Requested Test": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Receipt Item": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Plan Item": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Custody Event": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Method Input": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Method Output": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Observation": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Result Value": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Review Result": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Checklist Item": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Checklist Response": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Report Item": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Specification Limit": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Equipment Usage": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Inspection Obligation": {
+  "master": false,
+  "child": true,
+  "single": false
+ },
+ "Lab Inspection Test Plan": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Hold Point Release": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Settings": {
+  "master": false,
+  "child": false,
+  "single": true
+ },
+ "Lab Division": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Sample Type": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Test Definition": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Test Method Version": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab QA Checklist Version": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Project Profile": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Sampling Location": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Material Lot": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Specification Version": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Equipment": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Equipment Check": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Competency": {
+  "master": true,
+  "child": false,
+  "single": false
+ },
+ "Lab Work Request": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Work Authorization": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Sample": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Sample Receipt": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Work Plan": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Chain of Custody": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Specimen": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Conditioning Record": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Test Schedule": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Test Execution": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab QA Review": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Nonconformance": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Corrective Action": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Conformity Evaluation": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Result Report": {
+  "master": false,
+  "child": false,
+  "single": false
+ },
+ "Lab Result Dispatch": {
+  "master": false,
+  "child": false,
+  "single": false
+ }
+}

@@ -1,0 +1,178 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Result Dispatch",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-RD-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "work_request",
+  "division",
+  "project_profile",
+  "customer",
+  "column_5",
+  "report",
+  "recipient",
+  "channel",
+  "delivery_outcome",
+  "delivery_evidence",
+  "column_10",
+  "remarks",
+  "issued_by",
+  "issued_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "work_request",
+   "label": "Work Request",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Work Request"
+  },
+  {
+   "fieldname": "division",
+   "label": "Division",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Division"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report",
+   "label": "Report",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Result Report"
+  },
+  {
+   "fieldname": "recipient",
+   "label": "Recipient",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "channel",
+   "label": "Channel",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Email\nPhysical\nOther"
+  },
+  {
+   "fieldname": "delivery_outcome",
+   "label": "Delivery Outcome",
+   "fieldtype": "Select",
+   "default": "Pending",
+   "options": "Pending\nDelivered\nFailed"
+  },
+  {
+   "fieldname": "delivery_evidence",
+   "label": "Delivery Evidence",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "column_10",
+   "label": "Column 10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "issued_by",
+   "label": "Issued By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issued_on",
+   "label": "Issued On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

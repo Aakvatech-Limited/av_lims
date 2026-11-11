@@ -1,0 +1,50 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Observation",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "code",
+  "value",
+  "recorded",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "label": "Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "value",
+   "label": "Value",
+   "fieldtype": "Float",
+   "precision": "9",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recorded",
+   "label": "Value Recorded",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "description": "Confirm that the measured value, including zero, has been entered."
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

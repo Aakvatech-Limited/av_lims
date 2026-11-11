@@ -1,0 +1,35 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Checklist Item",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "question",
+  "mandatory"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "label": "Question",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "mandatory",
+   "label": "Mandatory",
+   "fieldtype": "Check",
+   "default": "1"
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

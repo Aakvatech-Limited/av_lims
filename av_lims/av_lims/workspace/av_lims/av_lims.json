@@ -1,0 +1,302 @@
+{
+ "doctype": "Workspace",
+ "name": "AV LIMS",
+ "label": "AV LIMS",
+ "title": "AV LIMS",
+ "module": "AV LIMS",
+ "standard": 1,
+ "public": 1,
+ "type": "Workspace",
+ "icon": "quality",
+ "content": "[{\"id\": \"heading\", \"type\": \"header\", \"data\": {\"text\": \"AV LIMS\", \"col\": 12}}, {\"id\": \"card-0\", \"type\": \"card\", \"data\": {\"card_name\": \"Intake and Planning\", \"col\": 4}}, {\"id\": \"card-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Testing\", \"col\": 4}}, {\"id\": \"card-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Review and Release\", \"col\": 4}}, {\"id\": \"card-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Project Masters\", \"col\": 4}}, {\"id\": \"card-4\", \"type\": \"card\", \"data\": {\"card_name\": \"Laboratory Setup\", \"col\": 4}}, {\"id\": \"card-5\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "links": [
+  {
+   "type": "Card Break",
+   "label": "Intake and Planning"
+  },
+  {
+   "type": "Link",
+   "label": "Inspection Test Plan",
+   "link_type": "DocType",
+   "link_to": "Lab Inspection Test Plan",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Hold Point Release",
+   "link_type": "DocType",
+   "link_to": "Lab Hold Point Release",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Work Request",
+   "link_type": "DocType",
+   "link_to": "Lab Work Request",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Work Authorization",
+   "link_type": "DocType",
+   "link_to": "Lab Work Authorization",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Sample Receipt",
+   "link_type": "DocType",
+   "link_to": "Lab Sample Receipt",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Sample",
+   "link_type": "DocType",
+   "link_to": "Lab Sample",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Work Plan",
+   "link_type": "DocType",
+   "link_to": "Lab Work Plan",
+   "is_query_report": 0
+  },
+  {
+   "type": "Card Break",
+   "label": "Testing"
+  },
+  {
+   "type": "Link",
+   "label": "Chain of Custody",
+   "link_type": "DocType",
+   "link_to": "Lab Chain of Custody",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Specimen",
+   "link_type": "DocType",
+   "link_to": "Lab Specimen",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Conditioning Record",
+   "link_type": "DocType",
+   "link_to": "Lab Conditioning Record",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Test Schedule",
+   "link_type": "DocType",
+   "link_to": "Lab Test Schedule",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Test Execution",
+   "link_type": "DocType",
+   "link_to": "Lab Test Execution",
+   "is_query_report": 0
+  },
+  {
+   "type": "Card Break",
+   "label": "Review and Release"
+  },
+  {
+   "type": "Link",
+   "label": "QA Review",
+   "link_type": "DocType",
+   "link_to": "Lab QA Review",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Nonconformance",
+   "link_type": "DocType",
+   "link_to": "Lab Nonconformance",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Corrective Action",
+   "link_type": "DocType",
+   "link_to": "Lab Corrective Action",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Conformity Evaluation",
+   "link_type": "DocType",
+   "link_to": "Lab Conformity Evaluation",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Result Report",
+   "link_type": "DocType",
+   "link_to": "Lab Result Report",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Result Dispatch",
+   "link_type": "DocType",
+   "link_to": "Lab Result Dispatch",
+   "is_query_report": 0
+  },
+  {
+   "type": "Card Break",
+   "label": "Project Masters"
+  },
+  {
+   "type": "Link",
+   "label": "Project Profile",
+   "link_type": "DocType",
+   "link_to": "Lab Project Profile",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Sampling Location",
+   "link_type": "DocType",
+   "link_to": "Lab Sampling Location",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Material Lot",
+   "link_type": "DocType",
+   "link_to": "Lab Material Lot",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Specification Version",
+   "link_type": "DocType",
+   "link_to": "Lab Specification Version",
+   "is_query_report": 0
+  },
+  {
+   "type": "Card Break",
+   "label": "Laboratory Setup"
+  },
+  {
+   "type": "Link",
+   "label": "Division",
+   "link_type": "DocType",
+   "link_to": "Lab Division",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Sample Type",
+   "link_type": "DocType",
+   "link_to": "Lab Sample Type",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Test Definition",
+   "link_type": "DocType",
+   "link_to": "Lab Test Definition",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Test Method Version",
+   "link_type": "DocType",
+   "link_to": "Lab Test Method Version",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "QA Checklist Version",
+   "link_type": "DocType",
+   "link_to": "Lab QA Checklist Version",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Equipment",
+   "link_type": "DocType",
+   "link_to": "Lab Equipment",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Equipment Check",
+   "link_type": "DocType",
+   "link_to": "Lab Equipment Check",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Competency",
+   "link_type": "DocType",
+   "link_to": "Lab Competency",
+   "is_query_report": 0
+  },
+  {
+   "type": "Link",
+   "label": "Settings",
+   "link_type": "DocType",
+   "link_to": "Lab Settings",
+   "is_query_report": 0
+  },
+  {
+   "type": "Card Break",
+   "label": "Reports"
+  },
+  {
+   "type": "Link",
+   "label": "Work Register",
+   "link_type": "Report",
+   "link_to": "Lab Work Register",
+   "is_query_report": 1
+  },
+  {
+   "type": "Link",
+   "label": "Test Due Register",
+   "link_type": "Report",
+   "link_to": "Lab Test Due Register",
+   "is_query_report": 1
+  },
+  {
+   "type": "Link",
+   "label": "Nonconformance Register",
+   "link_type": "Report",
+   "link_to": "Lab Nonconformance Register",
+   "is_query_report": 1
+  },
+  {
+   "type": "Link",
+   "label": "ITP Coverage",
+   "link_type": "Report",
+   "link_to": "Lab ITP Coverage",
+   "is_query_report": 1
+  }
+ ],
+ "roles": [
+  {
+   "role": "LIMS Technician"
+  },
+  {
+   "role": "LIMS Lead"
+  },
+  {
+   "role": "LIMS Manager"
+  },
+  {
+   "role": "LIMS Approver"
+  }
+ ],
+ "charts": [],
+ "number_cards": [],
+ "shortcuts": [],
+ "quick_lists": [],
+ "custom_blocks": []
+}

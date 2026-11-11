@@ -1,0 +1,25 @@
+{
+ "doctype": "Report",
+ "name": "Lab ITP Coverage",
+ "report_name": "Lab ITP Coverage",
+ "ref_doctype": "Lab Inspection Test Plan",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "module": "AV LIMS",
+ "add_total_row": 0,
+ "disabled": 0,
+ "roles": [
+  {
+   "role": "LIMS Technician"
+  },
+  {
+   "role": "LIMS Lead"
+  },
+  {
+   "role": "LIMS Manager"
+  },
+  {
+   "role": "LIMS Approver"
+  }
+ ]
+}

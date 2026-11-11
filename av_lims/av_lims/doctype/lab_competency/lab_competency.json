@@ -1,0 +1,164 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Competency",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-C-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "user",
+  "test_definition",
+  "valid_from",
+  "valid_until",
+  "column_5",
+  "can_test",
+  "can_process",
+  "can_review",
+  "can_approve",
+  "evidence",
+  "column_10",
+  "verified_by",
+  "verified_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "user",
+   "label": "User",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "User"
+  },
+  {
+   "fieldname": "test_definition",
+   "label": "Test Definition",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Test Definition"
+  },
+  {
+   "fieldname": "valid_from",
+   "label": "Valid From",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_until",
+   "label": "Valid Until",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "can_test",
+   "label": "Can Test",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "can_process",
+   "label": "Can Process",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "can_review",
+   "label": "Can Review",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "can_approve",
+   "label": "Can Approve",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "evidence",
+   "label": "Evidence",
+   "fieldtype": "Attach",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_10",
+   "label": "Column 10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified_by",
+   "label": "Verified By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "verified_on",
+   "label": "Verified On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

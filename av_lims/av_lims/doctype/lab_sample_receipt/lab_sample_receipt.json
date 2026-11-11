@@ -1,0 +1,161 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Sample Receipt",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-SR-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "work_request",
+  "division",
+  "project_profile",
+  "customer",
+  "column_5",
+  "received_on",
+  "delivery_reference",
+  "signed_work_request",
+  "samples_section",
+  "samples",
+  "after_samples",
+  "received_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "work_request",
+   "label": "Work Request",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Work Request"
+  },
+  {
+   "fieldname": "division",
+   "label": "Division",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Division"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "read_only": 1,
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "received_on",
+   "label": "Received On",
+   "fieldtype": "Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_reference",
+   "label": "Delivery Reference",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "signed_work_request",
+   "label": "Signed Work Request",
+   "fieldtype": "Attach",
+   "reqd": 1
+  },
+  {
+   "fieldname": "samples_section",
+   "label": "Samples",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "samples",
+   "label": "Samples",
+   "fieldtype": "Table",
+   "options": "Lab Receipt Item"
+  },
+  {
+   "fieldname": "after_samples",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "received_by",
+   "label": "Received By",
+   "fieldtype": "Data",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

@@ -1,0 +1,172 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Work Request",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-WR-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "customer",
+  "contact",
+  "division",
+  "project_profile",
+  "column_5",
+  "client_reference",
+  "test_program",
+  "program_revision",
+  "quotation",
+  "fee_estimate",
+  "requested_tests_section",
+  "requested_tests",
+  "after_requested_tests",
+  "instructions"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Customer"
+  },
+  {
+   "fieldname": "contact",
+   "label": "Contact",
+   "fieldtype": "Link",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "division",
+   "label": "Division",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Division"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_reference",
+   "label": "Client Reference",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "test_program",
+   "label": "Test Program",
+   "fieldtype": "Attach",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_revision",
+   "label": "Program Revision",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quotation",
+   "label": "Quotation",
+   "fieldtype": "Link",
+   "options": "Quotation"
+  },
+  {
+   "fieldname": "fee_estimate",
+   "label": "Fee Estimate",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "requested_tests_section",
+   "label": "Requested Tests",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requested_tests",
+   "label": "Requested Tests",
+   "fieldtype": "Table",
+   "options": "Lab Requested Test"
+  },
+  {
+   "fieldname": "after_requested_tests",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "instructions",
+   "label": "Instructions",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

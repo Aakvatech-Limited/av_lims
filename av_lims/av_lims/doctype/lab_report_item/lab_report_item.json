@@ -1,0 +1,44 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Report Item",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "execution",
+  "qa_review",
+  "result_digest"
+ ],
+ "fields": [
+  {
+   "fieldname": "execution",
+   "label": "Execution",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Test Execution"
+  },
+  {
+   "fieldname": "qa_review",
+   "label": "Qa Review",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab QA Review"
+  },
+  {
+   "fieldname": "result_digest",
+   "label": "Result Digest",
+   "fieldtype": "Data",
+   "read_only": 1
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

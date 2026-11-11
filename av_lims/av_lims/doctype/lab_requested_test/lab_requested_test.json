@@ -1,0 +1,48 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Requested Test",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "test_definition",
+  "sample_description",
+  "quantity",
+  "instructions"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_definition",
+   "label": "Test Definition",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Test Definition"
+  },
+  {
+   "fieldname": "sample_description",
+   "label": "Sample Description",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "quantity",
+   "label": "Quantity",
+   "fieldtype": "Int",
+   "default": "1"
+  },
+  {
+   "fieldname": "instructions",
+   "label": "Instructions",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

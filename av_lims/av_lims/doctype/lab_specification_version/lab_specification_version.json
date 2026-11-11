@@ -1,0 +1,154 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Specification Version",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-SV-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "project_profile",
+  "test_definition",
+  "version",
+  "reference",
+  "column_5",
+  "decision_rule",
+  "limits_section",
+  "limits",
+  "after_limits",
+  "approved_by",
+  "approved_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "project_profile",
+   "label": "Project Profile",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Project Profile"
+  },
+  {
+   "fieldname": "test_definition",
+   "label": "Test Definition",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Test Definition"
+  },
+  {
+   "fieldname": "version",
+   "label": "Version",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference",
+   "label": "Reference",
+   "fieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "decision_rule",
+   "label": "Decision Rule",
+   "fieldtype": "Select",
+   "default": "Simple Acceptance",
+   "reqd": 1,
+   "options": "Simple Acceptance"
+  },
+  {
+   "fieldname": "limits_section",
+   "label": "Limits",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "limits",
+   "label": "Limits",
+   "fieldtype": "Table",
+   "options": "Lab Specification Limit"
+  },
+  {
+   "fieldname": "after_limits",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

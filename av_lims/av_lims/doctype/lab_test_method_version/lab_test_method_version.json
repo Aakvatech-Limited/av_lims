@@ -1,0 +1,151 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Test Method Version",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 0,
+ "autoname": "format:AVL-TMV-{#####}",
+ "field_order": [
+  "details_section",
+  "status",
+  "test_definition",
+  "version",
+  "standard_reference",
+  "procedure",
+  "inputs_section",
+  "inputs",
+  "outputs_section",
+  "outputs",
+  "after_outputs",
+  "approved_by",
+  "approved_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1,
+   "default": "Draft"
+  },
+  {
+   "fieldname": "test_definition",
+   "label": "Test Definition",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Lab Test Definition"
+  },
+  {
+   "fieldname": "version",
+   "label": "Version",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "standard_reference",
+   "label": "Standard Reference",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "procedure",
+   "label": "Procedure",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "fieldname": "inputs_section",
+   "label": "Inputs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inputs",
+   "label": "Inputs",
+   "fieldtype": "Table",
+   "options": "Lab Method Input"
+  },
+  {
+   "fieldname": "outputs_section",
+   "label": "Outputs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "outputs",
+   "label": "Outputs",
+   "fieldtype": "Table",
+   "options": "Lab Method Output"
+  },
+  {
+   "fieldname": "after_outputs",
+   "label": "Additional Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Lead",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 1,
+   "write": 1
+  },
+  {
+   "role": "LIMS Approver",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "create": 0,
+   "write": 0
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

@@ -1,0 +1,93 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Settings",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 0,
+ "issingle": 1,
+ "field_order": [
+  "details_section",
+  "policies_confirmed",
+  "require_signed_authorization",
+  "allow_self_review",
+  "allow_partial_reports",
+  "enforce_competency",
+  "column_5",
+  "enforce_equipment_validity",
+  "policy_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "label": "Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "policies_confirmed",
+   "label": "Policies Confirmed",
+   "fieldtype": "Check",
+   "description": "Confirm approved business policies before operational actions are enabled."
+  },
+  {
+   "fieldname": "require_signed_authorization",
+   "label": "Require Signed Authorization",
+   "fieldtype": "Check",
+   "default": "1"
+  },
+  {
+   "fieldname": "allow_self_review",
+   "label": "Allow Self Review",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "allow_partial_reports",
+   "label": "Allow Partial Reports",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "enforce_competency",
+   "label": "Enforce Competency",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "column_5",
+   "label": "Column 5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enforce_equipment_validity",
+   "label": "Enforce Equipment Validity",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "policy_notes",
+   "label": "Policy Notes",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "LIMS Manager",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

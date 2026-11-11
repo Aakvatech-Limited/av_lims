@@ -1,0 +1,54 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Specification Limit",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "code",
+  "has_lower",
+  "lower_limit",
+  "has_upper",
+  "upper_limit"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "label": "Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "has_lower",
+   "label": "Has Lower",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "lower_limit",
+   "label": "Lower Limit",
+   "fieldtype": "Float",
+   "precision": "9"
+  },
+  {
+   "fieldname": "has_upper",
+   "label": "Has Upper",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "upper_limit",
+   "label": "Upper Limit",
+   "fieldtype": "Float",
+   "precision": "9"
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}

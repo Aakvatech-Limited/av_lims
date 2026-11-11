@@ -1,0 +1,14 @@
+{
+ "doctype": "Dock",
+ "name": "av_lims",
+ "app": "av_lims",
+ "standard": 1,
+ "items": [
+  {
+   "link_type": "Sidebar",
+   "link_to": "AV LIMS",
+   "title": "AV LIMS",
+   "icon": "\ud83e\uddea"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "doctype": "DocType",
+ "name": "Lab Inspection Obligation",
+ "module": "AV LIMS",
+ "engine": "InnoDB",
+ "istable": 1,
+ "issingle": 0,
+ "autoname": "hash",
+ "field_order": [
+  "title",
+  "test_definition",
+  "material_lot",
+  "sampling_location",
+  "required_count",
+  "count_basis",
+  "hold_point",
+  "witness_user",
+  "frequency_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "label": "Title",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "test_definition",
+   "label": "Test Definition",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Lab Test Definition"
+  },
+  {
+   "fieldname": "material_lot",
+   "label": "Material Lot",
+   "fieldtype": "Link",
+   "options": "Lab Material Lot"
+  },
+  {
+   "fieldname": "sampling_location",
+   "label": "Sampling Location",
+   "fieldtype": "Link",
+   "options": "Lab Sampling Location"
+  },
+  {
+   "fieldname": "required_count",
+   "label": "Required Count",
+   "fieldtype": "Int",
+   "reqd": 1
+  },
+  {
+   "fieldname": "count_basis",
+   "label": "Count Basis",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "default": "Samples",
+   "options": "Samples\nSpecimens\nExecutions"
+  },
+  {
+   "fieldname": "hold_point",
+   "label": "Hold Point",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "witness_user",
+   "label": "Witness User",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "fieldname": "frequency_reference",
+   "label": "Frequency Reference",
+   "fieldtype": "Data"
+  }
+ ],
+ "permissions": [],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "actions": [],
+ "links": [],
+ "states": []
+}
